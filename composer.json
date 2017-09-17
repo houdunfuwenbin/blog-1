@@ -20,6 +20,7 @@
         "league/fractal": "^0.14.0",
         "league/html-to-markdown": "^4.2",
         "overtrue/laravel-filesystem-qiniu": "^1.0",
+        "phpseclib/phpseclib": "~2.0",
         "predis/predis": "^1.1",
         "yzalis/identicon": "^1.1"
     },

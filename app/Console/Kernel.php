@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\BlogMove;
+use App\Console\Commands\Wallpaper;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -16,7 +17,8 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\BlogInstall::class,
         Commands\CreateAdmin::class,
-        BlogMove::class
+        BlogMove::class,
+        Wallpaper::class
     ];
 
     /**

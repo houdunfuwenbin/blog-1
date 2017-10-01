@@ -10,6 +10,7 @@
         "erusev/parsedown": "^1.6",
         "fideloper/proxy": "~3.3",
         "intervention/image": "^2.3",
+        "jaeger/querylist": "^4.0",
         "jcc/laravel-vote": "dev-master",
         "jellybool/flysystem-upyun": "dev-master",
         "jellybool/translug": "~2.0",

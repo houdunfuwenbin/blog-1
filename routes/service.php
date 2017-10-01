@@ -1,3 +1,5 @@
 <?php
 
-Route::get('service/upload', 'Service\GalleryController@upload');
+Route::group(['namespace' => 'Service', 'as' => 'service', 'prefix' => 'service'], function (){
+    Route::get('wallpaper/cron', 'WallpaperController@cron');
+});

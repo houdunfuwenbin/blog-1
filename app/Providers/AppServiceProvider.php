@@ -25,24 +25,17 @@ class AppServiceProvider extends ServiceProvider
         $lang = config('app.locale') != 'zh_cn' ? config('app.locale') : 'zh';
         Carbon::setLocale($lang);
 
-//        if (!request()->secure() && !app()->environment('local')) {
-//            URL::forceScheme('https');
-//        }
-
         Relation::morphMap([
             'discussions' => Discussion::class,
             'articles'    => Article::class,
         ]);
 
-//        App::bind('url', function () {
-//            $generator = new UrlGenerator(
-//                App::make('router')->getRoutes(),
-//                App::make('request'));
-//
-//            $generator->forceScheme('https');
-//
-//            return $generator;
-//        });
+        App::bind('url', function () {
+            $generator = new UrlGenerator(App::make('router')->getRoutes(), App::make('request'));
+            $generator->forceScheme('https');
+            return $generator;
+        });
+
     }
 
     /**

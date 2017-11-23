@@ -37,9 +37,17 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapServiceRoutes();
+
         Route::post('/oauth/token', [
             'uses' => '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken',
         ]);
+    }
+
+    protected function mapServiceRoutes(){
+        Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/service.php'));
     }
 
     /**

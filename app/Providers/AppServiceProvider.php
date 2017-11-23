@@ -9,6 +9,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Tools\FileManager\BaseManager;
 use App\Tools\FileManager\UpyunManager;
 use Illuminate\Database\Eloquent\Relations\Relation;
+use Carbon\Carbon;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $lang = config('app.locale') != 'zh_cn' ? config('app.locale') : 'zh';
-        \Carbon\Carbon::setLocale($lang);
+        Carbon::setLocale($lang);
 
         if (!request()->secure() && !app()->environment('local')) {
             URL::forceScheme('https');

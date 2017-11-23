@@ -15,8 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\BlogInstall::class,
-        Commands\CreateAdmin::class,
-        BlogMove::class
+        Commands\CreateAdmin::class
     ];
 
     /**

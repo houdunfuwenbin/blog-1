@@ -34,15 +34,15 @@ class AppServiceProvider extends ServiceProvider
             'articles'    => Article::class,
         ]);
 
-        App::bind('url', function () {
-            $generator = new UrlGenerator(
-                App::make('router')->getRoutes(),
-                App::make('request'));
-
-            $generator->forceScheme('https');
-
-            return $generator;
-        });
+//        App::bind('url', function () {
+//            $generator = new UrlGenerator(
+//                App::make('router')->getRoutes(),
+//                App::make('request'));
+//
+//            $generator->forceScheme('https');
+//
+//            return $generator;
+//        });
     }
 
     /**

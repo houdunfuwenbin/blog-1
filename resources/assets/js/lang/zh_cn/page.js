@@ -10,7 +10,7 @@ export default {
     links: '友链列表',
     systems: '系统设置',
     user_num: '用户数',
-    view_num: '访问数',
+    discussion_num: '讨论数',
     article_num: '文章数',
     comment_num: '评论数',
     all: '全部',

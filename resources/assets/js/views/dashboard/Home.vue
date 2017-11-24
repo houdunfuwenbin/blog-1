@@ -26,10 +26,10 @@
                 <div class="ibox">
                     <div class="ibox-title">
                         <span class="label label-success pull-right">{{ $t('page.all') }}</span>
-                        <h5 class="no-margins">{{ $t('page.view_num') }}</h5>
+                        <h5 class="no-margins">{{ $t('page.$discussion_num') }}</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins"><i class="ion-eye"></i>{{ statistics.visitors }}</h1>
+                        <h1 class="no-margins"><i class="ion-eye"></i>{{ statistics.discussions }}</h1>
                     </div>
                 </div>
             </div>

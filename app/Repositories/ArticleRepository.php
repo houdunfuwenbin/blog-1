@@ -11,13 +11,9 @@ class ArticleRepository
 
     protected $model;
 
-    protected $visitor;
-
-    public function __construct(Article $article, VisitorRepository $visitor)
+    public function __construct(Article $article)
     {
         $this->model = $article;
-
-        $this->visitor = $visitor;
     }
 
     /**
@@ -74,8 +70,6 @@ class ArticleRepository
         $article = $this->model->where('slug', $slug)->firstOrFail();
 
         $article->increment('view_count');
-
-        $this->visitor->log($article->id);
 
         return $article;
     }

@@ -38,15 +38,5 @@ export default [
         label: 'sidebar.link',
         icon : 'ion-ios-world',
         uri  : '/dashboard/links'
-    },
-    {
-        label: 'sidebar.visitor',
-        icon : 'ion-chatbubble-working',
-        uri  : '/dashboard/visitors'
-    },
-    {
-        label: 'sidebar.system',
-        icon : 'ion-gear-b',
-        uri  : '/dashboard/system'
     }
 ]

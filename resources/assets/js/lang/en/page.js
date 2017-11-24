@@ -10,7 +10,7 @@ export default {
     links: 'Links',
     systems: 'Systems',
     user_num: 'Users',
-    view_num: 'Views',
+    discussion_num: 'Discussions',
     article_num: 'Articles',
     comment_num: 'Comments',
     all: 'All',

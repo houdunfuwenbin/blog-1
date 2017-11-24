@@ -2,40 +2,35 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Repositories\DiscussionRepository;
 use App\Repositories\UserRepository;
-use App\Repositories\VisitorRepository;
 use App\Repositories\ArticleRepository;
 use App\Repositories\CommentRepository;
 
 class HomeController extends ApiController
 {
     protected $user;
-    protected $visitor;
+    protected $discussion;
     protected $article;
     protected $comment;
 
-    public function __construct(
-        UserRepository $user,
-        VisitorRepository $visitor,
-        ArticleRepository $article,
-        CommentRepository $comment)
-    {
+    public function __construct(UserRepository $user, ArticleRepository $article, CommentRepository $comment, DiscussionRepository $discussion){
         parent::__construct();
 
         $this->user = $user;
-        $this->visitor = $visitor;
         $this->article = $article;
         $this->comment = $comment;
+        $this->discussion = $discussion;
     }
 
     public function statistics()
     {
         $users = $this->user->getNumber();
-        $visitors = (int) $this->visitor->getAllClicks();
+        $discussions = $this->discussion->getNumber();
         $articles = $this->article->getNumber();
         $comments = $this->comment->getNumber();
 
-        $data = compact('users', 'visitors', 'articles', 'comments');
+        $data = compact('users', 'discussions', 'articles', 'comments');
 
         return $this->response->json($data);
     }

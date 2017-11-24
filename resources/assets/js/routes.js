@@ -139,14 +139,6 @@ export default [
                 ]
             },
             {
-                path: 'visitors',
-                component: () => import('dashboard/Visitor.vue')
-            },
-            {
-                path: 'system',
-                component: () => import('dashboard/System.vue')
-            },
-            {
                 path: '*',
                 redirect: '/dashboard'
             }

@@ -13,8 +13,8 @@ return [
 
     // Meta
     'meta' => [
-        'keywords' => '夏天的风,夏天博客,blog,laravel,vuejs,php',
-        'description' => '追求互联网技术,记录夏天对技术的追求与生活的热爱'
+        'keywords' => '左手代码,左手博客,blog,laravel,vuejs,php',
+        'description' => '不仅写代码，还有科技与人文'
     ],
 
     // Social Share

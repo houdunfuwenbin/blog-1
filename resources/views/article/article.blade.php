@@ -5,7 +5,7 @@
             <div class="media">
                 @if($article->page_image)
                 <a class="media-left" href="{{ url($article->slug) }}">
-                    <img alt="{{ $article->slug }}" src="{{ $article->page_image }}?imageView2/1/w/640/h/480/format/webp/interlace/1/q/100|watermark/2/text/5aSP5aSp55qE6aOO/font/5b6u6L2v6ZuF6buR/fontsize/240/fill/I0ZGRkZGRg==/dissolve/80/gravity/SouthEast/dx/10/dy/10|imageslim" data-holder-rendered="true">
+                    <img alt="{{ $article->slug }}" src="{{ $article->page_image }}?imageView2/1/w/260/h/180/format/webp/interlace/1/q/100|imageslim" data-holder-rendered="true">
                 </a>
                 @endif
                 <div class="media-body">
